@@ -2,7 +2,12 @@
 
 Um projeto interativo que exibe no mapa serviços essenciais como supermercados, farmácias, hospitais, escolas e muito mais, com foco em facilitar a localização em São Paulo e em outras regiões do Brasil.
 
-![Screenshot do Projeto](Imagens/pngLogo.png)
+![Screenshot do Projeto](Imagens/projetoIntegradorPrint2.jpeg)
+Versão Desktop
+
+![Screenshot do Projeto](Imagens/projetoIntegradorPrint1.png)
+
+Versão Mobile
 
 ## ✨ Funcionalidades
 
