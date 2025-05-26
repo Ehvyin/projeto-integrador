@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Mapa de Serviços Essenciais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  />
+</head>
+<body>
+  <div class="sidebar">
+     <div class="logo-area">
+  <img src="Imagens/pngLogo.png" alt="Logo" class="logo" />
+</div>
+
+    <h1>Mapa Na Mão!</h1>
+    <h2>O essencial nas palmas de suas mãos.</h2>
+     
+     <div class="horario">
+     <img src="Imagens/relógioPng.png" alt="Relógio" class="icone-relogio" />
+     <p class="relogio-titulo">Horário:</p>
+     <div id="hora-brasilia" class="relogio">00:00:00</div>
+     </div>
+
+
+
+     <br>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar região..." autocomplete="off" />
+      <button id="btnBuscarRegiao">🔍</button>
+      <ul id="sugestoes" class="sugestoes hidden"></ul>
+    </div>
+
+    <div class="buttons">
+      <button data-tipo="hospital"> <img src="Imagens/hospitalPng.png" alt="Hospital" class="icon" /> Hospitais</button>
+      <button data-tipo="school">  <img src="Imagens/escolaPng.png" alt="Escola" class="icon" /> Escolas</button>
+      <button data-tipo="college">  <img src="Imagens/escolaPng.png" alt="Faculdade" class="icon" /> Faculdades</button>
+      <button data-tipo="supermarket">  <img src="Imagens/supermercadoPng.png" alt="Mercado" class="icon" /> Supermercados</button>
+      <button data-tipo="pharmacy">  <img src="Imagens/farmaciaPng.png" alt="Farmacia" class="icon" /> Farmácias</button>
+      <button data-tipo="pet">  <img src="Imagens/petshopPng.png" alt="PetShop" class="icon" /> Pet Shops</button>
+      <button data-tipo="veterinary"> <img src="Imagens/veterinarioPng.png" alt="Veterinario" class="icon" /> Clínicas Veterinárias</button>
+      <br>
+      <button onclick="resetarMapa()"> <img src="Imagens/resetPng.png" alt="Redefinir" class="icon" /> Redefinir Mapa</button>
+      <footer class="footer">
+    <p>&copy; 2025 Mapa de Serviços Essenciais. Todos os direitos reservados.</p>
+    <p>Desenvolvido por Evelyn Souza • Projeto Educacional</p>
+  </footer>
+
+    </div>
+  </div>
+  <div id="map"></div>
+  <div id="loading" class="loading hidden">🔄 Carregando...</div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

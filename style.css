@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #eee;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+  margin-left: 280px;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  border-right: 1px solid #333;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #00ff88;
+  color: black;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #00ff88 ;
+}
+
+.buttons button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #2b2b2b;
+  color: white;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.buttons button:hover {
+  background-color: #333;
+}
+
+.buttons button.ativo {
+  background-color: #00ff88 !important;
+  color: #000 !important;
+  font-weight: bold;
+  border-color: #00ff88;
+}
+
+.loading {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #00ff88 ;
+  color: #121212;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  z-index: 9999;
+   font-family: 'Fredoka', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.sugestoes {
+  position: absolute;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 260px;
+  margin-top: 2px;
+  padding-left: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+.sugestoes li {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+  color: #eee;
+}
+
+.sugestoes li:hover {
+  background-color: #333;
+}
+
+#btnReset {
+  background-color: #ff5555;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #cc4444;
+}
+
+#btnReset:hover {
+  background-color: #cc4444;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto 15px auto;
+ /* filter: brightness(0) invert(1); /* se for um logo escuro, deixa ele branco */
+}
+
+.buttons button:last-child {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #00ff88;
+}
+
+.buttons button:last-child:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 15px 10px;
+  background-color: #1e1e1e;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  border-top: 1px solid #333;
+}
+
+.logo-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.horario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.icone-relogio {
+  width: 100px;
+  height: 100px;
+}
+
+.info-horario {
+  display: flex;
+  flex-direction: column;
+}
+
+.relogio-titulo {
+  font-size: 14px;
+  margin: 0;
+  color: #888;
+}
+
+.relogio {
+  font-size: 16px;
+  font-weight: bold;
+  color: #888;
+}
+
+.sidebar h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00ff88; 
+  text-align: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.icone-relogio {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+  }
+
+  #map {
+    margin-left: 0;
+    width: 100%;
+    height: calc(100vh - 300px); /* Ajuste conforme a altura da sidebar */
+  }
+
+  .sugestoes {
+    width: 100%;
+  }
+
+  .horario {
+    justify-content: center;
+  }
+
+  .buttons button {
+    font-size: 16px;
+  }
+
+
+}
+
